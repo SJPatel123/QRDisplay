@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     fun qrGenerateAndDisplay(qrImg: ImageView, qrData: String){
         val writer = QRCodeWriter()
+        // Here the size represents the pixels in QR Code
         val size = 300
         try{
             val bitMatrix = writer.encode(qrData, BarcodeFormat.QR_CODE, size, size)
